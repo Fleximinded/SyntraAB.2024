@@ -1,4 +1,4 @@
-﻿using Fleximinded.Core.Parts.CLI;
+﻿
 
 
 namespace SyntraAB._2024.cli
@@ -7,7 +7,6 @@ namespace SyntraAB._2024.cli
     {
         static void Main(string[] args)
         {
-            CliRuntime runtime = new();
         }
     }
 }
