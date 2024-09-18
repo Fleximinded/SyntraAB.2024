@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Documents", "!Documents", 
 		!Documents\CSharp-LINQ.pptx = !Documents\CSharp-LINQ.pptx
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLinkedList", "DLinkedList\DLinkedList.csproj", "{8C7C44C6-89F4-4F86-8FB3-37BD35E76377}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,9 +24,16 @@ Global
 		{C3ED0556-480C-4062-90B5-09077E210636}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3ED0556-480C-4062-90B5-09077E210636}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3ED0556-480C-4062-90B5-09077E210636}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C7C44C6-89F4-4F86-8FB3-37BD35E76377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C7C44C6-89F4-4F86-8FB3-37BD35E76377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C7C44C6-89F4-4F86-8FB3-37BD35E76377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C7C44C6-89F4-4F86-8FB3-37BD35E76377}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8C7C44C6-89F4-4F86-8FB3-37BD35E76377} = {57C0DA4B-40AE-40D7-8CA9-062E02CE66A0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFE7DEB7-FC40-4643-B02A-E9BE4F2B6590}
