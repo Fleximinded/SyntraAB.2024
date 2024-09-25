@@ -19,7 +19,7 @@ namespace DLinkedList
             {
                 case "test":
                     TestLinkedList();
-                    break;
+                    return true;
                 case "find":
                     if(command.ContainsOption("name"))
                     {
@@ -33,9 +33,9 @@ namespace DLinkedList
                     {
                         TestMethods.TestFind();
                     }
-                    break;
+                    return true;
             }
-            return true;
+            return false;
         }
 
 
