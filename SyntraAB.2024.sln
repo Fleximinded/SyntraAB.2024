@@ -8,15 +8,22 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LINQ", "LINQ", "{57C0DA4B-40AE-40D7-8CA9-062E02CE66A0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Documents", "!Documents", "{13DBC8FA-7ED2-4676-A171-81B2B72DA61F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DLinkedList", "DLinkedList\DLinkedList.csproj", "{8C7C44C6-89F4-4F86-8FB3-37BD35E76377}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LambdaTest", "LambdaTest\LambdaTest.csproj", "{CD18718A-5EFB-4E4D-9E97-3244C31D4E5D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqExamples", "LinqExamples\LinqExamples.csproj", "{9F1C9CA3-4162-4334-A9E3-A15C2EA74A69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Topics", "!Topics", "{D8518CCA-65A8-44B2-9978-36B4360FB36B}"
 	ProjectSection(SolutionItems) = preProject
 		!Documents\CSharp-LINQ.pptx = !Documents\CSharp-LINQ.pptx
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DLinkedList", "DLinkedList\DLinkedList.csproj", "{8C7C44C6-89F4-4F86-8FB3-37BD35E76377}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaTest", "LambdaTest\LambdaTest.csproj", "{CD18718A-5EFB-4E4D-9E97-3244C31D4E5D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqExamples", "LinqExamples\LinqExamples.csproj", "{9F1C9CA3-4162-4334-A9E3-A15C2EA74A69}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{E9BC9BC0-CF65-441E-8B94-7498FC570E42}"
+	ProjectSection(SolutionItems) = preProject
+		!Documents\Data\airports.json = !Documents\Data\airports.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +55,8 @@ Global
 		{8C7C44C6-89F4-4F86-8FB3-37BD35E76377} = {57C0DA4B-40AE-40D7-8CA9-062E02CE66A0}
 		{CD18718A-5EFB-4E4D-9E97-3244C31D4E5D} = {57C0DA4B-40AE-40D7-8CA9-062E02CE66A0}
 		{9F1C9CA3-4162-4334-A9E3-A15C2EA74A69} = {57C0DA4B-40AE-40D7-8CA9-062E02CE66A0}
+		{D8518CCA-65A8-44B2-9978-36B4360FB36B} = {13DBC8FA-7ED2-4676-A171-81B2B72DA61F}
+		{E9BC9BC0-CF65-441E-8B94-7498FC570E42} = {13DBC8FA-7ED2-4676-A171-81B2B72DA61F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFE7DEB7-FC40-4643-B02A-E9BE4F2B6590}
