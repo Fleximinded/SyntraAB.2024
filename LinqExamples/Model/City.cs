@@ -11,11 +11,23 @@ namespace LinqExamples.Model
         public static City[] ImportZipCodes(this string path) {
             if(Path.Exists(path))
             {
+                JsonSerializerOptions options = new JsonSerializerOptions()
+                {
+                    PropertyNameCaseInsensitive = true
+                };
                 string source=File.ReadAllText(path);
-                var res=JsonSerializer.Deserialize<City[]>(source);
+                var res=JsonSerializer.Deserialize<City[]>(source,options);
                 return res??[];
             }
             return [];
+        }
+        public static string ExportToJson<T>(this T obj)
+        {
+            JsonSerializerOptions options = new JsonSerializerOptions()
+            {
+                WriteIndented = true
+            };
+            return JsonSerializer.Serialize(obj, options);
         }
     
     }
