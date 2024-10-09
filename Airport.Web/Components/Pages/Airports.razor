@@ -1,0 +1,44 @@
+﻿@page "/airports"
+
+<PageTitle>Airports</PageTitle>
+
+<h1>Airports</h1>
+
+<p>This component demonstrates showing data.</p>
+
+@if(AirportsList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <br />
+    <input type="text" class="form-control" placeholder="Search on name" @bind="searchName" />
+    <input type="text" class="form-control" placeholder="Search on IATA code" @bind="searchIata" />
+    <input type="text" class="form-control" placeholder="Search on Country" @bind="searchCountry" />
+    <br />
+    <button class="btn btn-primary" @onclick="Search">Search</button>   
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IATA</th>
+                <th>Name</th>
+                <th>Country</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+            @foreach(var airport in AirportsList)
+            {
+                <tr>
+                    <td>@airport.IataCode</td>
+                    <td>@airport.Name</td>
+                    <td>@airport.Country</td>
+                    <td>@airport.City</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

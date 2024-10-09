@@ -17,6 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqExamples", "LinqExample
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Topics", "!Topics", "{D8518CCA-65A8-44B2-9978-36B4360FB36B}"
 	ProjectSection(SolutionItems) = preProject
+		!Documents\CSharp-Concurrency.pptx = !Documents\CSharp-Concurrency.pptx
 		!Documents\CSharp-LINQ.pptx = !Documents\CSharp-LINQ.pptx
 	EndProjectSection
 EndProject
@@ -27,9 +28,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{E9BC9BC0-C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AirportLabo", "AirportLabo", "{4AAD7465-A215-4256-8B94-9547EC1B22A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airport.Cli", "Airport.Cli\Airport.Cli.csproj", "{FEAA6667-62F5-4A95-85CD-CA5230E0EB82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airport.Cli", "Airport.Cli\Airport.Cli.csproj", "{FEAA6667-62F5-4A95-85CD-CA5230E0EB82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airport.Data", "Airport.Data\Airport.Data.csproj", "{37D640A8-651B-495E-A811-044A765E405F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airport.Data", "Airport.Data\Airport.Data.csproj", "{37D640A8-651B-495E-A811-044A765E405F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Threading", "Threading", "{E3DBA12B-5E88-4D9E-A423-D1B61EAD96EB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConcurrencyDemo", "ConcurrencyDemo\ConcurrencyDemo.csproj", "{5E696258-2D36-42FE-94C5-507CB505DDED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airport.Web", "Airport.Web\Airport.Web.csproj", "{38AC098D-1944-4B84-9556-5ACF25E0DC44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +68,14 @@ Global
 		{37D640A8-651B-495E-A811-044A765E405F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37D640A8-651B-495E-A811-044A765E405F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37D640A8-651B-495E-A811-044A765E405F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E696258-2D36-42FE-94C5-507CB505DDED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E696258-2D36-42FE-94C5-507CB505DDED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E696258-2D36-42FE-94C5-507CB505DDED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E696258-2D36-42FE-94C5-507CB505DDED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38AC098D-1944-4B84-9556-5ACF25E0DC44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38AC098D-1944-4B84-9556-5ACF25E0DC44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38AC098D-1944-4B84-9556-5ACF25E0DC44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38AC098D-1944-4B84-9556-5ACF25E0DC44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +89,8 @@ Global
 		{4AAD7465-A215-4256-8B94-9547EC1B22A5} = {57C0DA4B-40AE-40D7-8CA9-062E02CE66A0}
 		{FEAA6667-62F5-4A95-85CD-CA5230E0EB82} = {4AAD7465-A215-4256-8B94-9547EC1B22A5}
 		{37D640A8-651B-495E-A811-044A765E405F} = {4AAD7465-A215-4256-8B94-9547EC1B22A5}
+		{5E696258-2D36-42FE-94C5-507CB505DDED} = {E3DBA12B-5E88-4D9E-A423-D1B61EAD96EB}
+		{38AC098D-1944-4B84-9556-5ACF25E0DC44} = {4AAD7465-A215-4256-8B94-9547EC1B22A5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFE7DEB7-FC40-4643-B02A-E9BE4F2B6590}

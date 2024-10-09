@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ConcurrencyDemo\ConcurrencyDemo.csproj" />
     <ProjectReference Include="..\DLinkedList\DLinkedList.csproj" />
     <ProjectReference Include="..\LambdaTest\LambdaTest.csproj" />
     <ProjectReference Include="..\LinqExamples\LinqExamples.csproj" />
