@@ -47,5 +47,10 @@ namespace Airport.Web.Services.Src
             }
             return result.ToList();
         }
+
+        public async Task<List<AirportInfo>> GetAllAirportsAsync(int start = 0, int take = -1)
+        {
+            return await Task.Run(()=>GetAllAirports(start, take));
+        }
     }
 }

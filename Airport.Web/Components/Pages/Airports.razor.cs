@@ -19,11 +19,12 @@ namespace Airport.Web.Components.Pages
             AirportsList = Service.Find(searchName, searchIata, searchCountry);
             StateHasChanged();
         }
-        protected override void OnAfterRender(bool firstRender)
+
+        protected override async Task OnAfterRenderAsync(bool firstRender)
         {
             if(firstRender)
             {
-                AirportsList = Service.GetAllAirports(0, 100);
+                AirportsList = await Service.GetAllAirportsAsync(0, 100);
                 StateHasChanged();
             }
         }

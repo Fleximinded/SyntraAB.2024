@@ -143,5 +143,9 @@ namespace ConcurrencyDemo.Source
                 Console.WriteLine($"Exeption catched in tread: {ex.Message}");
             }   
         }
+        public static void LockExample() { 
+        
+        
+        }
     }
 }

@@ -31,7 +31,7 @@ namespace ConcurrencyDemo
                 case "threads.demo4":
                     string x = prm.FindOption("x")?.Value ?? "X";
                     string y = prm.FindOption("y")?.Value ?? "O";
-                    ThreadingDemo.Demo4(x,y);
+                    ThreadingDemo.Demo4(x, y);
                     return true;
                 case "threads.demo5":
                     string x2 = prm.FindOption("x")?.Value ?? "X";
@@ -43,6 +43,29 @@ namespace ConcurrencyDemo
                     return true;
                 case "treads.catch":
                     ThreadingDemo.ExceptionDemoCatched();
+                    return true;
+                case "lock.demo":
+                    LockDemoClass demo = new LockDemoClass();
+                    demo.Execute();
+                    return true;
+                case "threadpool.info":
+                    ThreadPoolInfo info = new ThreadPoolInfo();
+                    info.GetThreadPoolInfo();
+                    return true;
+                case "task.result":
+                    TaskDemo taskDemo = new TaskDemo();
+                    taskDemo.ResultDemo();
+                    return true;
+                case "task.exception":
+                    TaskDemo exeptionDemo = new TaskDemo();
+                    exeptionDemo.ExceptionDemo();
+                    return true;
+                case "task.continue":
+                    TaskDemo continueDemo = new TaskDemo();
+                    if(prm.ContainsOption("-2"))
+                        continueDemo.ContinueTaskDemo();
+                    else
+                        continueDemo.ContinueDemo();
                     return true;
             }
             return false;
