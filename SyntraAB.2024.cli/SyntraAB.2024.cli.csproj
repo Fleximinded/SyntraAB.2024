@@ -9,12 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Fleximinded.Core" Version="1.0.5" />
+    <PackageReference Include="Fleximinded.Core" Version="1.0.6" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ConcurrencyDemo\ConcurrencyDemo.csproj" />
     <ProjectReference Include="..\DLinkedList\DLinkedList.csproj" />
+    <ProjectReference Include="..\IO.Demo\IO.Demo.csproj" />
     <ProjectReference Include="..\LambdaTest\LambdaTest.csproj" />
     <ProjectReference Include="..\LinqExamples\LinqExamples.csproj" />
   </ItemGroup>

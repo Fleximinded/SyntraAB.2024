@@ -1,4 +1,5 @@
 ﻿using System.Reflection.Emit;
+using ConcurrencyDemo.Labo;
 using ConcurrencyDemo.Source;
 using Fleximinded.Core.Parts.CLI;
 
@@ -6,13 +7,17 @@ namespace ConcurrencyDemo
 {
     public class ConcurrencyCli : ICliExecutable
     {
+        bool LaboMode { get; set; } = false;
         public string Name { get => "Concurrency"; }
         public string Description { get => "This is a Async test"; }
         public bool Execute(ICliRuntime owner, ICliCommand prm)
         {
-
+            if(LaboMode) return ExecuteLabo(owner,prm);
             switch(prm.Command)
             {
+                case "mode":
+                    LaboMode = prm.ContainsOption("labo");
+                    return true;
                 case "threads.block":
                     ThreadingDemo.BlockMyApp();
                     return true;
@@ -67,9 +72,42 @@ namespace ConcurrencyDemo
                     else
                         continueDemo.ContinueDemo();
                     return true;
+
             }
             return false;
         }
+        public bool ExecuteLabo(ICliRuntime owner, ICliCommand prm)
+        {
 
+
+            switch(prm.Command)
+            {
+                case "mode":
+                    LaboMode = prm.ContainsOption("labo");
+                    return true;
+                case "thread.1":
+                    ThreadLabo.Labo1();
+                    return true;
+                    case "thread.2":
+                    ThreadLabo.Labo2();
+                    return true;
+                    case "thread.3":
+                    ThreadLabo.Labo3();
+                    return true;
+                    case "task.1":
+                    TaskLabo.Labo1();
+                    return true;
+                    case "task.2":
+                    Task.Run(() => TaskLabo.Labo2()).Wait();
+                    return true;
+                    case "syncasync.1":
+                    Task.Run(() => SyncAsyncLabo.Labo1()).Wait();
+                    return true;
+                   
+
+
+            }
+            return false;
+        }
     }
 }

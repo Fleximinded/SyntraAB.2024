@@ -18,6 +18,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Topics", "!Topics", "{D8518CCA-65A8-44B2-9978-36B4360FB36B}"
 	ProjectSection(SolutionItems) = preProject
 		!Documents\CSharp-Concurrency.pptx = !Documents\CSharp-Concurrency.pptx
+		!Documents\CSharp-IO-Files.pptx = !Documents\CSharp-IO-Files.pptx
 		!Documents\CSharp-LINQ.pptx = !Documents\CSharp-LINQ.pptx
 	EndProjectSection
 EndProject
@@ -37,6 +38,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConcurrencyDemo", "ConcurrencyDemo\ConcurrencyDemo.csproj", "{5E696258-2D36-42FE-94C5-507CB505DDED}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airport.Web", "Airport.Web\Airport.Web.csproj", "{38AC098D-1944-4B84-9556-5ACF25E0DC44}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IO", "IO", "{5BAD4FBD-3FD1-4036-A5F1-53D2C12BF931}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IO.Demo", "IO.Demo\IO.Demo.csproj", "{C5142373-D4E6-4496-A022-5B4CFC89FB6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,6 +81,10 @@ Global
 		{38AC098D-1944-4B84-9556-5ACF25E0DC44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38AC098D-1944-4B84-9556-5ACF25E0DC44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38AC098D-1944-4B84-9556-5ACF25E0DC44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5142373-D4E6-4496-A022-5B4CFC89FB6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5142373-D4E6-4496-A022-5B4CFC89FB6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5142373-D4E6-4496-A022-5B4CFC89FB6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5142373-D4E6-4496-A022-5B4CFC89FB6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,6 +100,7 @@ Global
 		{37D640A8-651B-495E-A811-044A765E405F} = {4AAD7465-A215-4256-8B94-9547EC1B22A5}
 		{5E696258-2D36-42FE-94C5-507CB505DDED} = {E3DBA12B-5E88-4D9E-A423-D1B61EAD96EB}
 		{38AC098D-1944-4B84-9556-5ACF25E0DC44} = {4AAD7465-A215-4256-8B94-9547EC1B22A5}
+		{C5142373-D4E6-4496-A022-5B4CFC89FB6A} = {5BAD4FBD-3FD1-4036-A5F1-53D2C12BF931}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFE7DEB7-FC40-4643-B02A-E9BE4F2B6590}
