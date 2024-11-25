@@ -1,0 +1,34 @@
+﻿@page "/employee/all"
+
+
+@if(EmployeeList == null)
+{
+    <div>Loading...</div>
+
+
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Birth Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var empl in EmployeeList)
+            {
+                <tr>
+                    <td>@empl.Id</td>
+                    <td>@empl.FirstName</td>
+                    <td>@empl.LastName</td>
+                    <td>@empl.BirthDate</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
