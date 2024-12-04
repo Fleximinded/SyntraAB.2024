@@ -1,0 +1,94 @@
+﻿@page "/menu"
+
+@using Syntra.Frituurtje.Contracts.Models
+@using Syntra.Frituurtje.Web.Components.Modules
+<div class="container-fluid">
+    @if(Topics == null)
+    {
+        <Spinner Class="me-3" Type="SpinnerType.Dots" Color="SpinnerColor.Success" Size="SpinnerSize.ExtraLarge" />
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-md-6">
+
+                <h2>Menu topics</h2>
+                <br />
+                <Grid TItem="MenuTopic"
+                      AllowRowClick="true"
+                      AllowSorting="true"
+                      Class="table table-hover border-top"
+                      OnRowClick="OnRowClick"
+                      Data="Topics">
+
+                    <GridColumns>
+                        <GridColumn TItem="MenuTopic" HeaderText="Id" PropertyName="Id">
+                            @context.Id
+                        </GridColumn>
+                        <GridColumn TItem="MenuTopic" HeaderText="Title" PropertyName="Title">
+                            @context.Title
+                        </GridColumn>
+                        <GridColumn TItem="MenuTopic" HeaderText="Description" PropertyName="Description">
+                            @(context.Description ?? "");
+                        </GridColumn>
+                        <GridColumn TItem="MenuTopic" HeaderText="Action">
+                            <Tooltip Title="Add an item to this topic" role="button">
+                                <Icon Color="IconColor.Success" Name="IconName.PlusCircle" @onclick="async ()=> await OnAddItem(context)" />
+                            </Tooltip>
+                        </GridColumn>
+                    </GridColumns>
+                </Grid>
+                <br />
+            </div>
+
+
+            @if(MenuItems != null)
+            {
+
+                <div class="col-md-6">
+                    <h2>Menu Items</h2>
+                    <br />
+                    <Grid TItem="MenuItem"
+                          AllowRowClick="true"
+                          AllowSorting="true"
+                          Class="table table-hover border-top"
+                          OnRowClick="OnItemRowClick"
+                          Data="MenuItems">
+
+                        <GridColumns>
+                            <GridColumn TItem="MenuItem" HeaderText="Naam" PropertyName="Name">
+                                @context.Name
+                            </GridColumn>
+                            <GridColumn TItem="MenuItem" HeaderText="Omschrijving" PropertyName="Description">
+                                @(context.Description ?? "");
+                            </GridColumn>
+                            <GridColumn TItem="MenuItem" HeaderText="Prijs" PropertyName="Price">
+                                @context.Price
+                            </GridColumn>
+                            <GridColumn TItem="MenuItem" HeaderText="Action">
+                                <Tooltip Title="Edit this item" role="button">
+                                    <Icon Color="IconColor.Success" Name="IconName.PencilSquare" @onclick="async ()=> await OnEditItem(context)" />
+                                </Tooltip>
+                            </GridColumn>
+
+                        </GridColumns>
+
+                    </Grid>
+                </div>
+            }
+
+        </div>
+    }
+</div>
+<Modal @ref="BbModal"
+       title="@ItemAction">
+
+    <BodyTemplate>
+        <MenuItemEditModule Value="SelectedItem" ValueChanged="OnItemEdited" />
+    </BodyTemplate>
+    <FooterTemplate>
+        <Button Color="ButtonColor.Secondary" @onclick="OnHideModalClick">Cancel</Button>
+        <Button Color="ButtonColor.Success" @onclick="OnSave">Save</Button>
+    </FooterTemplate>
+
+</Modal>
