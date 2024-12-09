@@ -70,6 +70,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syntra.Frituurtje.Contracts
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syntra.Frituurtje.Database", "Syntra.Frituurtje.Database\Syntra.Frituurtje.Database.csproj", "{093228B0-8347-40F2-8283-03313C0DB5E9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Opgave", "Opgave", "{EE529CA6-E9C8-42EC-8CB3-A299E7532A06}"
+	ProjectSection(SolutionItems) = preProject
+		!Documents\Opgave\Opgave examen advanced csharp.docx = !Documents\Opgave\Opgave examen advanced csharp.docx
+		!Documents\Opgave\postcodes.csv = !Documents\Opgave\postcodes.csv
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -176,6 +182,7 @@ Global
 		{A652EF84-91B9-4E51-A3D0-90EEF383A08B} = {56637642-C96F-4AE5-A08A-26AA6D9FF098}
 		{A4AA12D7-D2BE-4F37-9364-ABD128F797E3} = {56637642-C96F-4AE5-A08A-26AA6D9FF098}
 		{093228B0-8347-40F2-8283-03313C0DB5E9} = {56637642-C96F-4AE5-A08A-26AA6D9FF098}
+		{EE529CA6-E9C8-42EC-8CB3-A299E7532A06} = {13DBC8FA-7ED2-4676-A171-81B2B72DA61F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFE7DEB7-FC40-4643-B02A-E9BE4F2B6590}
