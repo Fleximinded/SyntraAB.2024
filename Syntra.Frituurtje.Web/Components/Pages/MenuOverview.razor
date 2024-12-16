@@ -9,7 +9,7 @@
     }
     else
     {
-        <div class="row">
+        <div id="top-row" class="row space-top">
             <div class="col-md-6">
 
                 <h2>Menu topics</h2>
@@ -19,7 +19,8 @@
                       AllowSorting="true"
                       Class="table table-hover border-top"
                       OnRowClick="OnRowClick"
-                      Data="Topics">
+                      Data="Topics"
+                      Id="TopicTable">
 
                     <GridColumns>
                         <GridColumn TItem="MenuTopic" HeaderText="Id" PropertyName="Id">
@@ -33,7 +34,7 @@
                         </GridColumn>
                         <GridColumn TItem="MenuTopic" HeaderText="Action">
                             <Tooltip Title="Add an item to this topic" role="button">
-                                <Icon Color="IconColor.Success" Name="IconName.PlusCircle" @onclick="async ()=> await OnAddItem(context)" />
+                                <Icon Color="IconColor.Success" Name="IconName.PlusCircle" Class="add-btn" @onclick="async ()=> await OnAddItem(context)" />
                             </Tooltip>
                         </GridColumn>
                     </GridColumns>
@@ -53,7 +54,8 @@
                           AllowSorting="true"
                           Class="table table-hover border-top"
                           OnRowClick="OnItemRowClick"
-                          Data="MenuItems">
+                          Data="MenuItems"
+                          Id="ItemTable">
 
                         <GridColumns>
                             <GridColumn TItem="MenuItem" HeaderText="Naam" PropertyName="Name">

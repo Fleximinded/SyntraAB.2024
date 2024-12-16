@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Topics", "!Topics", "{D851
 		!Documents\CSharp-IO-EF.pptx = !Documents\CSharp-IO-EF.pptx
 		!Documents\CSharp-IO-Files.pptx = !Documents\CSharp-IO-Files.pptx
 		!Documents\CSharp-LINQ.pptx = !Documents\CSharp-LINQ.pptx
+		!Documents\CSharp-Patterns.pptx = !Documents\CSharp-Patterns.pptx
+		!Documents\CSharp-testing.pptx = !Documents\CSharp-testing.pptx
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{E9BC9BC0-CF65-441E-8B94-7498FC570E42}"
@@ -75,6 +77,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Opgave", "Opgave", "{EE529C
 		!Documents\Opgave\Opgave examen advanced csharp.docx = !Documents\Opgave\Opgave examen advanced csharp.docx
 		!Documents\Opgave\postcodes.csv = !Documents\Opgave\postcodes.csv
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syntra.Frituurtje.UnitTests", "Syntra.Frituurtje.UnitTests\Syntra.Frituurtje.UnitTests.csproj", "{3AF86048-EB16-4568-A5FA-2CB16D695961}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syntra.Frituurtje.Helpers", "Syntra.Frituurtje.Helpers\Syntra.Frituurtje.Helpers.csproj", "{B596E75F-03DE-4C59-873C-61A55AE88EB2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syntra.Frituurtje.E2E", "Syntra.Frituurtje.E2E\Syntra.Frituurtje.E2E.csproj", "{AA2B2DDC-A172-4240-A081-C291B31363DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -154,6 +162,18 @@ Global
 		{093228B0-8347-40F2-8283-03313C0DB5E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{093228B0-8347-40F2-8283-03313C0DB5E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{093228B0-8347-40F2-8283-03313C0DB5E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AF86048-EB16-4568-A5FA-2CB16D695961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AF86048-EB16-4568-A5FA-2CB16D695961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AF86048-EB16-4568-A5FA-2CB16D695961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AF86048-EB16-4568-A5FA-2CB16D695961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B596E75F-03DE-4C59-873C-61A55AE88EB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B596E75F-03DE-4C59-873C-61A55AE88EB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B596E75F-03DE-4C59-873C-61A55AE88EB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B596E75F-03DE-4C59-873C-61A55AE88EB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA2B2DDC-A172-4240-A081-C291B31363DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA2B2DDC-A172-4240-A081-C291B31363DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA2B2DDC-A172-4240-A081-C291B31363DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA2B2DDC-A172-4240-A081-C291B31363DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -183,6 +203,9 @@ Global
 		{A4AA12D7-D2BE-4F37-9364-ABD128F797E3} = {56637642-C96F-4AE5-A08A-26AA6D9FF098}
 		{093228B0-8347-40F2-8283-03313C0DB5E9} = {56637642-C96F-4AE5-A08A-26AA6D9FF098}
 		{EE529CA6-E9C8-42EC-8CB3-A299E7532A06} = {13DBC8FA-7ED2-4676-A171-81B2B72DA61F}
+		{3AF86048-EB16-4568-A5FA-2CB16D695961} = {56637642-C96F-4AE5-A08A-26AA6D9FF098}
+		{B596E75F-03DE-4C59-873C-61A55AE88EB2} = {56637642-C96F-4AE5-A08A-26AA6D9FF098}
+		{AA2B2DDC-A172-4240-A081-C291B31363DF} = {56637642-C96F-4AE5-A08A-26AA6D9FF098}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFE7DEB7-FC40-4643-B02A-E9BE4F2B6590}
