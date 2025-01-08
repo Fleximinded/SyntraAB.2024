@@ -13,6 +13,7 @@ namespace Syntra.Frituurtje.Database.Context
         public DbSet<MenuTopic> Topics { get; set; }
         public DbSet<MenuItem> Items { get; set; }
         public DbSet<MenuImage> Images { get; set; }
+        public DbSet<FoodOrder> Orders { get; set; }
 
         public FrituurtjeContext(DbContextOptions<FrituurtjeContext> options):base(options) { }  
     }

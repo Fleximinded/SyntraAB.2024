@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Syntra.Frituurtje.Database.Context;
 
@@ -11,9 +12,11 @@ using Syntra.Frituurtje.Database.Context;
 namespace Syntra.Frituurtje.Database.Migrations
 {
     [DbContext(typeof(FrituurtjeContext))]
-    partial class FrituurtjeContextModelSnapshot : ModelSnapshot
+    [Migration("20250106200441_add-topic")]
+    partial class addtopic
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,11 +28,6 @@ namespace Syntra.Frituurtje.Database.Migrations
             modelBuilder.Entity("Syntra.Frituurtje.Contracts.Models.FoodOrder", b =>
                 {
                     b.Property<string>("Id")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("ClientId")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
