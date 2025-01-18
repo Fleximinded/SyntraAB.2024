@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace Syntra.Frituurtje.Contracts.Models
 {
@@ -18,6 +19,7 @@ namespace Syntra.Frituurtje.Contracts.Models
         [Precision(18, 2)]
         public decimal Price { get; set; }
         public List<MenuImage> Images { get; set; } = new List<MenuImage>();
+        [JsonIgnore]
         public MenuTopic Topic { get; set; } = default!;
     }
 }

@@ -92,7 +92,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syntra.Patterns", "Syntra.P
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WEB", "WEB", "{A830C2C4-2D99-4510-944A-2372E8C149A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syntra.Frituurtje.API", "Syntra.Frituurtje.API\Syntra.Frituurtje.API.csproj", "{0BA6ADB2-BCB2-4949-9F5C-698F8186394D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syntra.Frituurtje.API", "Syntra.Frituurtje.API\Syntra.Frituurtje.API.csproj", "{0BA6ADB2-BCB2-4949-9F5C-698F8186394D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syntra.Frituurtje.Wasm", "Syntra.Frituurtje.Wasm\Syntra.Frituurtje.Wasm\Syntra.Frituurtje.Wasm.csproj", "{5FE0A576-EE0A-4776-B837-6472B0C63B09}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syntra.Frituurtje.Wasm.Client", "Syntra.Frituurtje.Wasm\Syntra.Frituurtje.Wasm.Client\Syntra.Frituurtje.Wasm.Client.csproj", "{E4DFF51B-57EA-455E-B12C-1FD735D54747}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syntra.Frituurtje.Wasm.Shared", "Syntra.Frituurtje.Wasm.Shared\Syntra.Frituurtje.Wasm.Shared.csproj", "{5FE1ADD6-C1A5-4581-922D-8470DD5DCFD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -192,6 +198,18 @@ Global
 		{0BA6ADB2-BCB2-4949-9F5C-698F8186394D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BA6ADB2-BCB2-4949-9F5C-698F8186394D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BA6ADB2-BCB2-4949-9F5C-698F8186394D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FE0A576-EE0A-4776-B837-6472B0C63B09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FE0A576-EE0A-4776-B837-6472B0C63B09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FE0A576-EE0A-4776-B837-6472B0C63B09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FE0A576-EE0A-4776-B837-6472B0C63B09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4DFF51B-57EA-455E-B12C-1FD735D54747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4DFF51B-57EA-455E-B12C-1FD735D54747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4DFF51B-57EA-455E-B12C-1FD735D54747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4DFF51B-57EA-455E-B12C-1FD735D54747}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FE1ADD6-C1A5-4581-922D-8470DD5DCFD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FE1ADD6-C1A5-4581-922D-8470DD5DCFD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FE1ADD6-C1A5-4581-922D-8470DD5DCFD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FE1ADD6-C1A5-4581-922D-8470DD5DCFD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -226,6 +244,9 @@ Global
 		{AA2B2DDC-A172-4240-A081-C291B31363DF} = {56637642-C96F-4AE5-A08A-26AA6D9FF098}
 		{6F2CFF15-E4E0-48A3-A816-02D70E8BD673} = {6CC2D403-6ED3-4896-83F6-37FCB0425343}
 		{0BA6ADB2-BCB2-4949-9F5C-698F8186394D} = {A830C2C4-2D99-4510-944A-2372E8C149A9}
+		{5FE0A576-EE0A-4776-B837-6472B0C63B09} = {A830C2C4-2D99-4510-944A-2372E8C149A9}
+		{E4DFF51B-57EA-455E-B12C-1FD735D54747} = {A830C2C4-2D99-4510-944A-2372E8C149A9}
+		{5FE1ADD6-C1A5-4581-922D-8470DD5DCFD9} = {A830C2C4-2D99-4510-944A-2372E8C149A9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFE7DEB7-FC40-4643-B02A-E9BE4F2B6590}
