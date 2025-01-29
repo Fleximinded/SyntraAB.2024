@@ -1,0 +1,44 @@
+﻿@page "/orders"
+@rendermode InteractiveWebAssembly
+
+<h3>OrderOverview</h3>
+<div class="container">
+    <div class="row">
+        @if (Orders == null)
+        {
+            <Spinner Class="me-3" Type="SpinnerType.Dots" Color="SpinnerColor.Success" Size="SpinnerSize.ExtraLarge" />
+        }
+        else
+        {
+            <div class="col-12">
+                <h4>Orders</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Order Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var order in Orders)
+                        {
+                            <tr>
+                                <td>@order.Id</td>
+                                <td>@order.OrderDate</td>
+                                <td>@order.MenuDescription</td>
+                                <td>@order.Quantity</td>
+                                <td>@order.Price</td>
+                                <td>@(order.Quantity * order.Price)</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+
+</div>

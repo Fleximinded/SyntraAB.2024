@@ -1,21 +1,21 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Syntra.Frituurtje.Contracts.Models;
-using Syntra.Frituurtje.Database.Context;
-using Syntra.Frituurtje.Database.Defines;
+using Syntra.Frituurtje.Db.Context;
+using Syntra.Frituurtje.Db.Defines;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Syntra.Frituurtje.Database.Repository
+namespace Syntra.Frituurtje.Db.Repository
 {
     public class OrderRepository :IOrderRepository
     {
         FrituurtjeContext Context { get; init; } = default!;
         DbSet<FoodOrder> OrderTable { get; init; } = default!;
-        public OrderRepository(FrituurtjeContext context) {
-            Context = context;
+        public OrderRepository(IDbContextFactory<FrituurtjeContext> factory) {
+            Context = factory.CreateDbContext();
             OrderTable = Context.Orders;
         }
         public async Task<bool> DeleteAsync(string id)

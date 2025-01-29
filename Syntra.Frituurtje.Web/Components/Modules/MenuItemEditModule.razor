@@ -27,18 +27,23 @@
                 <div class="form-group">
                     <label for="image">Image</label>
                     <InputFile id="fileInput" OnChange="OnFileSelected" class="form-control" />
+                    @if (FileError)
+                    {
+                        <Tooltip Title="De foto mag niet groter zijn als 5MB" role="button">
+                            <Icon Color="IconColor.Danger" Size="IconSize.x6" Name="IconName.ExclamationCircleFill"></Icon>
+                        </Tooltip>
+                    }
                 </div>
 
             </form>
         </div>
         @if(Value.Images?.Count > 0)
         {
-            @foreach(var img in Value.Images)
-            {
+            
                 <div class="col-md-6">
-                    <img src="@img.ToImageSource" alt="@img.Name" class="img-thumbnail" />
+                <img src="@Value.Images[0].ToImageSource" alt="@Value.Images[0].Name" class="img-thumbnail" />
                 </div>
-            }
+          
 
         }
     </div>

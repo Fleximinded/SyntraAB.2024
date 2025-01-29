@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Syntra.Frituurtje.Contracts.Models;
-using Syntra.Frituurtje.Database.Context;
-using Syntra.Frituurtje.Database.Defines;
+using Syntra.Frituurtje.Db.Context;
+using Syntra.Frituurtje.Db.Defines;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Syntra.Frituurtje.Database.Repository
+namespace Syntra.Frituurtje.Db.Repository
 {
     public class OrderRepository :IOrderRepository
     {

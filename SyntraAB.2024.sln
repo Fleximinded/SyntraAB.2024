@@ -100,6 +100,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syntra.Frituurtje.Wasm.Clie
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syntra.Frituurtje.Wasm.Shared", "Syntra.Frituurtje.Wasm.Shared\Syntra.Frituurtje.Wasm.Shared.csproj", "{5FE1ADD6-C1A5-4581-922D-8470DD5DCFD9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syntra.Frituurtje.Db", "Syntra.Frituurtje.Db\Syntra.Frituurtje.Db.csproj", "{08EADEBB-8ACF-4C5A-BE6F-8C6583AB23EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -210,6 +212,10 @@ Global
 		{5FE1ADD6-C1A5-4581-922D-8470DD5DCFD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FE1ADD6-C1A5-4581-922D-8470DD5DCFD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FE1ADD6-C1A5-4581-922D-8470DD5DCFD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08EADEBB-8ACF-4C5A-BE6F-8C6583AB23EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08EADEBB-8ACF-4C5A-BE6F-8C6583AB23EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08EADEBB-8ACF-4C5A-BE6F-8C6583AB23EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08EADEBB-8ACF-4C5A-BE6F-8C6583AB23EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -247,6 +253,7 @@ Global
 		{5FE0A576-EE0A-4776-B837-6472B0C63B09} = {A830C2C4-2D99-4510-944A-2372E8C149A9}
 		{E4DFF51B-57EA-455E-B12C-1FD735D54747} = {A830C2C4-2D99-4510-944A-2372E8C149A9}
 		{5FE1ADD6-C1A5-4581-922D-8470DD5DCFD9} = {A830C2C4-2D99-4510-944A-2372E8C149A9}
+		{08EADEBB-8ACF-4C5A-BE6F-8C6583AB23EC} = {A830C2C4-2D99-4510-944A-2372E8C149A9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFE7DEB7-FC40-4643-B02A-E9BE4F2B6590}

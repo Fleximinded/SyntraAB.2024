@@ -1,4 +1,6 @@
-﻿@if(Value != null && MenuTopics != null)
+﻿
+
+@if(Value != null && MenuTopics != null)
 {
     <div class="row form-body">
         <div class="col-md-6">
@@ -17,7 +19,7 @@
                 </div>
                 <div class="form-group">
                     <label for="topic-combo">Topic:</label>
-                    <select id="topic-combo" name="dropdown">
+                    <select id="topic-combo" @onchange="OnTopicSelected"  name="dropdown">
                         @foreach(var topicItem in MenuTopics)
                         {
                             <option id="owner" selected="@(topicItem.Id==Value?.Topic?.Id)" value="@topicItem">@topicItem.Title</option>
@@ -27,6 +29,12 @@
                 <div class="form-group">
                     <label for="image">Image</label>
                     <InputFile id="fileInput" OnChange="OnFileSelected" class="form-control" />
+                    @if (FileError)
+                    {
+                        <Tooltip Title="The image should not be larger than 5MB" role="button">
+                            <Icon Color="IconColor.Danger" Size="IconSize.x6" Name="IconName.ExclamationCircleFill"></Icon>
+                        </Tooltip>
+                    }
                 </div>
 
             </form>

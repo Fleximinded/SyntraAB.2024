@@ -10,9 +10,11 @@ namespace Syntra.Frituurtje.Wasm.Client
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.Services.AddBlazorBootstrap();
-            builder.Services.AddScoped(s => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-       //     builder.Services.AddHttpClient<IMenuService, MenuClientService>(c => new HttpClient() { BaseAddress= new Uri(builder.HostEnvironment.BaseAddress) });
+          //  builder.Services.AddScoped(s => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            builder.Services.AddHttpClient("LocalClient", client => { client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress); });
+            builder.Services.AddHttpClient("OrderApiClient", client => { client.BaseAddress = new Uri("https://localhost:7191"); });
             builder.Services.AddScoped<IMenuService,MenuClientService>();
+            builder.Services.AddScoped<IMenuOrderService, MenuOrderService>();
             await builder.Build().RunAsync();
         }
     }

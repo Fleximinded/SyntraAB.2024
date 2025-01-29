@@ -16,10 +16,7 @@ namespace Syntra.Frituurtje.Wasm.Client.Pages
         Modal BbModal { get; set; } = default!;
         MenuItem? SelectedItem { get; set; } = null;
         string ItemAction { get; set; } = "";
-        protected override async Task OnInitializedAsync()
-        {
-      
-        }
+       
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
             if(firstRender)
@@ -53,6 +50,10 @@ namespace Syntra.Frituurtje.Wasm.Client.Pages
         private async Task OnRowClick(GridRowEventArgs<MenuTopic> args)
         {
             MenuItems = args.Item.MenuItems;
+            foreach(var item in MenuItems)
+            {
+                item.Topic = args.Item;
+            }   
         }
         private async Task OnItemRowClick(GridRowEventArgs<MenuItem> args)
         {

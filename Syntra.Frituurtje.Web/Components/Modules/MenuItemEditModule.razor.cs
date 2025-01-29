@@ -11,6 +11,7 @@ namespace Syntra.Frituurtje.Web.Components.Modules
 {
     public partial class MenuItemEditModule
     {
+        const int MaxFileSize = 1024 * 1024 * 5;
         [Parameter]
         public MenuItem? Value { get; set; }
         [Parameter]
@@ -18,6 +19,7 @@ namespace Syntra.Frituurtje.Web.Components.Modules
         [Inject]
         public IMenuService Service { get; set; } = default!;
         IEnumerable<MenuTopic>? MenuTopics { get; set; }
+        bool FileError { get; set; } = false;   
         protected override async void OnAfterRender(bool firstRender)
         {
             if(firstRender)
@@ -32,16 +34,20 @@ namespace Syntra.Frituurtje.Web.Components.Modules
         }
         async Task OnFileSelected(InputFileChangeEventArgs e)
         {
+            FileError = false;
             var file = e.File;
-            if(file != null && Value!=null)
+            if(file != null && Value != null && file.Size < MaxFileSize)
             {
-                MenuImage img=new MenuImage();
-                img.ImageType=file.ContentType;
+                MenuImage img = new MenuImage();
+                img.ImageType = file.ContentType;
                 MemoryStream memoryStream = new MemoryStream();
-                await file.OpenReadStream().CopyToAsync(memoryStream);
-                img.Data=memoryStream.ToArray();
-                img.Name=file.Name;
+                await file.OpenReadStream(MaxFileSize).CopyToAsync(memoryStream);
+                img.Data = memoryStream.ToArray();
+                img.Name = file.Name;
                 Value.Images.Add(img);
+            }
+            else {
+                FileError = true;
             }
         }
     }

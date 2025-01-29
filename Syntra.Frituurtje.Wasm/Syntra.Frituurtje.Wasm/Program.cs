@@ -1,7 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 using Syntra.Frituurtje.Contracts.Defines;
-using Syntra.Frituurtje.Database.Context;
-using Syntra.Frituurtje.Database.Repository;
+using Syntra.Frituurtje.Db.Context;
+using Syntra.Frituurtje.Db.Repository;
 using Syntra.Frituurtje.Wasm.Client.Pages;
 using Syntra.Frituurtje.Wasm.Client.Services;
 using Syntra.Frituurtje.Wasm.Components;
@@ -21,14 +22,23 @@ namespace Syntra.Frituurtje.Wasm
                 .AddInteractiveWebAssemblyComponents();
 
             var connectionstring = builder.Configuration.GetConnectionString("DefaultConnection");
-            builder.Services.AddDbContext<FrituurtjeContext>(c => c.UseSqlServer(connectionstring));
+            builder.Services.AddDbContextFactory<FrituurtjeContext>(c => c.UseSqlServer(connectionstring));
 
             builder.Services.AddBlazorBootstrap();
-
+            builder.Services.AddHttpClient("OrderApiClient", client => { client.BaseAddress = new Uri("https://localhost:7191"); });
+            builder.Services.AddScoped<IMenuOrderService, MenuOrderService>();
             builder.Services.AddScoped<IMenuRepository,MenuRepository>();
             builder.Services.AddScoped<IMenuService, MenuService>();
 
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .WriteTo.File("Log/frituurtje-.log",rollingInterval: RollingInterval.Day)
+                .WriteTo.Console()
+                .CreateLogger();
+
             builder.Services.AddControllers();
+            builder.Logging.AddSerilog();   
+            builder.Host.UseSerilog();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
