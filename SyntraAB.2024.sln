@@ -102,6 +102,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syntra.Frituurtje.Wasm.Shar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syntra.Frituurtje.Db", "Syntra.Frituurtje.Db\Syntra.Frituurtje.Db.csproj", "{08EADEBB-8ACF-4C5A-BE6F-8C6583AB23EC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{8462AF75-ABE2-4D9C-BE65-09C2A793954B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integrated", "Integrated", "{6792BFFE-3B3B-4F05-B886-50C741DB6E83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syntra.Fietshersteller.Site", "Syntra.Fietshersteller.Site\Syntra.Fietshersteller.Site.csproj", "{95DCF78A-D4BC-4D37-9627-E7138D045B60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syntra.Fietshersteller.Db", "Syntra.Fietshersteller.Db\Syntra.Fietshersteller.Db.csproj", "{053158F1-12DD-470C-A6A1-2BC5B547BA7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -216,6 +224,14 @@ Global
 		{08EADEBB-8ACF-4C5A-BE6F-8C6583AB23EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08EADEBB-8ACF-4C5A-BE6F-8C6583AB23EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08EADEBB-8ACF-4C5A-BE6F-8C6583AB23EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95DCF78A-D4BC-4D37-9627-E7138D045B60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95DCF78A-D4BC-4D37-9627-E7138D045B60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95DCF78A-D4BC-4D37-9627-E7138D045B60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95DCF78A-D4BC-4D37-9627-E7138D045B60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{053158F1-12DD-470C-A6A1-2BC5B547BA7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{053158F1-12DD-470C-A6A1-2BC5B547BA7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{053158F1-12DD-470C-A6A1-2BC5B547BA7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{053158F1-12DD-470C-A6A1-2BC5B547BA7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -254,6 +270,9 @@ Global
 		{E4DFF51B-57EA-455E-B12C-1FD735D54747} = {A830C2C4-2D99-4510-944A-2372E8C149A9}
 		{5FE1ADD6-C1A5-4581-922D-8470DD5DCFD9} = {A830C2C4-2D99-4510-944A-2372E8C149A9}
 		{08EADEBB-8ACF-4C5A-BE6F-8C6583AB23EC} = {A830C2C4-2D99-4510-944A-2372E8C149A9}
+		{6792BFFE-3B3B-4F05-B886-50C741DB6E83} = {8462AF75-ABE2-4D9C-BE65-09C2A793954B}
+		{95DCF78A-D4BC-4D37-9627-E7138D045B60} = {6792BFFE-3B3B-4F05-B886-50C741DB6E83}
+		{053158F1-12DD-470C-A6A1-2BC5B547BA7A} = {6792BFFE-3B3B-4F05-B886-50C741DB6E83}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFE7DEB7-FC40-4643-B02A-E9BE4F2B6590}

@@ -1,0 +1,57 @@
+﻿@page "/userview"
+
+@using Microsoft.AspNetCore.Authorization
+@using System.Security.Claims
+
+@attribute [Authorize]
+
+<PageTitle>Auth</PageTitle>
+
+<h1>You are authenticated</h1>
+
+<AuthorizeView>
+    <Authorized>
+        <p>Hello @context.User.Identity?.Name!</p>
+        <h2>Your Claims:</h2>
+        <ul>
+            @foreach (var claim in context.User.Claims)
+            {
+                <li>@claim.Type: @claim.Value</li>
+            }
+        </ul>
+    </Authorized>
+    <NotAuthorized>
+        <p>You are not authorized to view this topic.</p>
+    </NotAuthorized>
+</AuthorizeView>
+
+<AuthorizeView Roles="user">
+    <Authorized>
+        <p>Hello @context.User.Identity?.Name!</p>
+        @if (CurrentUser?.PersonalInfo != null)
+        {
+            <p>Hello @CurrentUser.PersonalInfo.FirstName @CurrentUser.PersonalInfo.LastName!</p>
+        }
+        else
+        {
+            <p>Hello @context.User.Identity?.Name!</p>
+        }
+    </Authorized>
+    <NotAuthorized>
+        <p>You are not authorized to view this topic.</p>
+    </NotAuthorized>
+</AuthorizeView>
+
+<AuthorizeView Roles="admin">
+    <Authorized>
+        <p>Hello Admin</p>
+        @if (CurrentUser?.PersonalInfo != null)
+        {
+            <p>Street @CurrentUser.PersonalInfo.Street @CurrentUser.PersonalInfo.Number</p>
+            <p>Street @CurrentUser.PersonalInfo.PostalCode @CurrentUser.PersonalInfo.City</p>
+        }
+    </Authorized>
+    <NotAuthorized>
+        <p>You have no administrator rights! How bad, you have to climb higher on the company stairs, like me!!!. Loser!</p>
+    </NotAuthorized>
+</AuthorizeView>
