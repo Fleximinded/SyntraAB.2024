@@ -1,0 +1,30 @@
+﻿
+<AuthorizeView>
+    <Authorized>
+        @if(User?.Identity != null)
+        {
+            <h3>Welcome, @(User.Identity.Name ?? "Unknown User")</h3>
+            <h3>Your claims are: </h3>
+            <ul>
+                @if(User.Claims.Any())
+                {
+                    foreach(var claim in User.Claims)
+                    {
+                        <li>@claim.Type: @claim.Value</li>
+                    }
+                }
+                else
+                {
+                    <li>No claims available.</li>
+                }
+            </ul>
+        }
+        else
+        {
+            <h2> No User is selected</h2>
+        }
+    </Authorized>
+    <NotAuthorized>
+        <h3>You are not authorized to view this page.</h3>
+    </NotAuthorized>
+</AuthorizeView>

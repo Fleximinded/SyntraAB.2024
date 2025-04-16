@@ -1,0 +1,24 @@
+﻿@page "/userinfo"
+@using Syntra.Auth0.Demo.Client.Modules
+
+<UserInfo />
+<AuthorizeView Roles="poweruser">
+    <Authorized>
+        <h3>Power User</h3>
+        <p>You are a power user!</p>
+    </Authorized>
+    <NotAuthorized>
+        <h3>Not a Power User</h3>
+        <p>You are not a power user!</p>
+    </NotAuthorized>
+</AuthorizeView>
+<AuthorizeView Roles="admin">
+    <Authorized>
+        <h3>Administrator</h3>
+        <p>You are Superman!</p>
+    </Authorized>
+    <NotAuthorized>
+        <h3>Helas !</h3>
+        <p>You are not Superman, loser!</p>
+    </NotAuthorized>
+</AuthorizeView>
