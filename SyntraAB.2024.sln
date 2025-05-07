@@ -22,6 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Topics", "!Topics", "{D851
 		!Documents\CSharp-IO-Files.pptx = !Documents\CSharp-IO-Files.pptx
 		!Documents\CSharp-LINQ.pptx = !Documents\CSharp-LINQ.pptx
 		!Documents\CSharp-Patterns.pptx = !Documents\CSharp-Patterns.pptx
+		!Documents\CSharp-Reflection.pptx = !Documents\CSharp-Reflection.pptx
 		!Documents\CSharp-RegEx.pptx = !Documents\CSharp-RegEx.pptx
 		!Documents\CSharp-security.pptx = !Documents\CSharp-security.pptx
 		!Documents\CSharp-testing.pptx = !Documents\CSharp-testing.pptx
