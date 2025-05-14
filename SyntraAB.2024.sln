@@ -134,6 +134,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syntra.Cli.Runtime", "Syntr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflection.Tools", "Reflection.Tools\Reflection.Tools.csproj", "{C3C4C949-60D0-4FD9-B435-09C45C2E97E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Example", "Demo.Example\Demo.Example.csproj", "{945D08B1-0649-4679-B432-03BEBA4F7FC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -288,6 +290,10 @@ Global
 		{C3C4C949-60D0-4FD9-B435-09C45C2E97E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3C4C949-60D0-4FD9-B435-09C45C2E97E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3C4C949-60D0-4FD9-B435-09C45C2E97E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{945D08B1-0649-4679-B432-03BEBA4F7FC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{945D08B1-0649-4679-B432-03BEBA4F7FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{945D08B1-0649-4679-B432-03BEBA4F7FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{945D08B1-0649-4679-B432-03BEBA4F7FC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -339,6 +345,7 @@ Global
 		{834261C5-C770-B7A3-F943-3C1977AF0537} = {A798A15B-14BD-4886-8861-ABA3A5DE1499}
 		{35BEA9BD-683A-400F-4E78-BD453F782CF7} = {A798A15B-14BD-4886-8861-ABA3A5DE1499}
 		{C3C4C949-60D0-4FD9-B435-09C45C2E97E3} = {A798A15B-14BD-4886-8861-ABA3A5DE1499}
+		{945D08B1-0649-4679-B432-03BEBA4F7FC3} = {A798A15B-14BD-4886-8861-ABA3A5DE1499}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFE7DEB7-FC40-4643-B02A-E9BE4F2B6590}

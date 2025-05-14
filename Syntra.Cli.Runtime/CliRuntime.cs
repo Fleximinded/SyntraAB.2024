@@ -27,6 +27,7 @@ namespace Syntra.Cli.Runtime
             Config = config ?? Config;
             AddExecutor(new BasicExecution());
             AddPlugins();
+            Console.WriteLine();
         }
 
         private void AddPlugins()
@@ -61,6 +62,7 @@ namespace Syntra.Cli.Runtime
             if(!Executors.ContainsKey(executable.Name))
             {
                 Executors.Add(executable.Name, executable);
+                Console.WriteLine($"Executor {executable.Name} added");
                 return true;
             }
             return false;

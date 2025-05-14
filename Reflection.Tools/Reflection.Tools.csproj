@@ -10,4 +10,8 @@
     <ProjectReference Include="..\Syntra.Cli.Ext\Syntra.Cli.Ext.csproj" />
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /Y /I &quot;$(TargetPath)&quot; &quot;D:\data\Syntra\Plugins&quot;" />
+  </Target>
+
 </Project>

@@ -54,7 +54,14 @@ namespace Syntra.Cli.Runtime
         }
 
         public ICliCommandParameter? FindOption(string optionName, bool useCase = false)
-            => Parameters.Where(p => !useCase ? p.Option.ToLower() == optionName.ToLower() : p.Option == optionName).FirstOrDefault();
-        
-    }
+        {
+            var option = Parameters.Where(p => !useCase ? p.Option.ToLower() == optionName.ToLower() : p.Option == optionName).FirstOrDefault();
+            if(option == null)
+            {
+                option = Parameters.Where(p => !useCase ? p.Option.Replace(OptionSeperator, "").ToLower() == optionName.ToLower() : p.Option.Replace(OptionSeperator, "") == optionName).FirstOrDefault();
+            }
+            return option;
+        }
+
+        }
 }
